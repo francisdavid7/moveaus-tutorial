@@ -145,8 +145,26 @@ header .first-header>div>div {
     color: var(--color-accent);
 }
 
+h2 {
+    color: var(--color-primary-dark);
+    font-size: 30px;
+    text-align: center;
+}
+
+h2+p {
+    font-size: var(--color-text-secondary);
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+section:not(.hero-section) {
+    padding: 5% 60px;
+}
+
 /* Hero section styles */
 .hero-section {
+    position: relative;
     min-height: 82vh;
     height: 82vh;
     padding: 0 60px;
@@ -187,4 +205,60 @@ header .first-header>div>div {
 .hero-section .hero-content button {
     display: flex;
     align-items: center;
+}
+
+.hero-banne {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--color-background);
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-banne>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-banne>div span {
+    font-size: 40px;
+    color: var(--color-accent);
+}
+
+.box-container {
+    margin-block-start: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.box-container .box {
+    flex-shrink: 0;
+    width: 250px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.box-container .box span {
+    font-size: 45px;
+    color: var(--color-primary);
+}
+
+.box-container .box h4 {
+    font-size: 14px;
+    color: var(--color-primary);
+    margin-block-end: 5px;
+}
+
+.box-container .box p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
 }
