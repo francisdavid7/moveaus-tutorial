@@ -66,9 +66,11 @@
 button {
     font-size: 16.5px;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     text-transform: uppercase;
     font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
 .btn-small {
@@ -124,7 +126,7 @@ header .first-header>div>div {
     justify-content: space-between;
 }
 
-.second-header .logo img {
+.logo img {
     width: 180px;
 
 }
@@ -149,6 +151,10 @@ h2 {
     color: var(--color-primary-dark);
     font-size: 30px;
     text-align: center;
+}
+
+h2 span {
+    color: var(--color-accent);
 }
 
 h2+p {
@@ -202,10 +208,6 @@ section:not(.hero-section) {
     gap: 15px;
 }
 
-.hero-section .hero-content button {
-    display: flex;
-    align-items: center;
-}
 
 .hero-banne {
     position: absolute;
@@ -241,9 +243,10 @@ section:not(.hero-section) {
 
 .box-container .box {
     flex-shrink: 0;
+    flex-grow: 1;
     width: 250px;
     border: 1px solid var(--color-border);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     padding: 30px;
 }
 
@@ -261,4 +264,161 @@ section:not(.hero-section) {
 .box-container .box p {
     color: var(--color-text-secondary);
     font-size: 14px;
+}
+
+
+/* Form styles */
+form {
+    padding: 30px;
+    width: fit-content;
+    margin: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    margin-block-start: 25px;
+}
+
+form .input-field {
+    display: flex;
+    gap: 10px;
+}
+
+form .input-field div {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+form .input-field div label {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+}
+
+form .input-field div input,
+select,
+textarea {
+    width: 300px;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    outline-color: var(--color-border-light);
+    margin-block-end: 15px;
+}
+
+form textarea {
+    width: 100%;
+    resize: none;
+    height: 120px;
+}
+
+form button {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    gap: 30px;
+    background-color: var(--color-primary-dark);
+    padding: 20px;
+    color: var(--color-background);
+}
+
+footer > div {
+    width: 300px;
+}
+
+footer > div h3 {
+    color: var(--color-accent);
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    header .first-header {
+        padding-inline: 10px;
+    }
+
+    .second-header {
+        padding-inline: 20px;
+    }
+
+    .hero-banne {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    header .first-header {
+        display: none;
+    }
+
+    .hero-section {
+        padding-inline: 0;
+    }
+
+    .hero-section .hero-content {
+        padding-left: 60px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .second-header nav {
+        gap: 10px;
+    }
+
+    .second-header nav a {
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .hero-banne {
+        display: none;
+    }
+
+    form .input-field {
+        flex-wrap: wrap;
+    }
+
+    form .input-field > div {
+        width: 100%;
+    }
+
+    form .input-field > div input, select {
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+
+    .hero-section {
+        height: unset;
+        min-height: 100vh;
+    }
+
+    .hero-section .hero-content {
+        width: 100%;
+        padding-inline: 60px;
+    }
+
+    .hero-section .hero-content div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .second-header nav, header button {
+        display: none;
+    }
 }
