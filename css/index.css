@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    /* Primary Colors */
+    --color-primary: #081E3C;
+    /* Deep Navy */
+    --color-primary-light: #12345A;
+    /* Lighter Navy */
+    --color-primary-dark: #06162D;
+    /* Dark Navy */
+
+    /* Accent */
+    --color-accent: #EE6B0D;
+    /* Move/CTA Orange */
+    --color-accent-light: #F58A32;
+    /* Light Orange */
+    --color-accent-dark: #C95505;
+    /* Dark Orange */
+
+    /* Backgrounds */
+    --color-background: #FFFFFF;
+    /* Main White */
+    --color-background-soft: #FCFCFC;
+    --color-background-gray: #F2F2F2;
+
+    /* Text */
+    --color-text: #0D1D32;
+    /* Main Heading */
+    --color-text-secondary: #45494F;
+    /* Body Text */
+    --color-text-muted: #73777D;
+    /* Muted Text */
+    --color-text-light: #FFFFFF;
+
+    /* Borders */
+    --color-border: #E5E5E5;
+    --color-border-light: #EEEEEE;
+
+    /* Cards */
+    --color-card: #FFFFFF;
+    --color-card-hover: #F8F9FA;
+
+    /* Status / Supporting Colors */
+    --color-success: #16834B;
+    --color-warning: #F2A900;
+    --color-info: #2D6FA3;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(8, 30, 60, 0.08);
+    --shadow-md: 0 4px 16px rgba(8, 30, 60, 0.12);
+    --shadow-lg: 0 8px 30px rgba(8, 30, 60, 0.16);
+
+    /* Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+}
+
+button {
+    font-size: 16.5px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-small {
+    padding: 10px 16px;
+}
+
+.btn-default {
+    padding: 12px 30px;
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+}
+
+.btn-outline {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: 2px solid var(--color-primary);
+}
+
+/* Header styles */
+header .first-header {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 5px 40px;
+}
+
+header .first-header>div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .first-header .h-1 {
+    margin-right: auto;
+}
+
+header .first-header>div>div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.second-header {
+    background-color: var(--color-background);
+    padding: 5px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.second-header .logo img {
+    width: 180px;
+
+}
+
+.second-header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.second-header nav a {
+    display: flex;
+    color: var(--color-text);
+    font-weight: 600;
+    transition: .4s;
+}
+
+.second-header nav a:hover {
+    color: var(--color-accent);
+}
+
+/* Hero section styles */
+.hero-section {
+    min-height: 82vh;
+    height: 82vh;
+    padding: 0 60px;
+    background-image: url(../assets/images/hero-banner.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    background-image: linear-gradient(to left, #ffffff00, #fff, #fff);
+    width: 600px;
+    height: inherit;
+    padding-block-start: 80px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    width: 80%;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    width: 80%;
+    margin-block: 20px;
+    line-height: 1.5;
+}
+
+.hero-content h1 span {
+    color: var(--color-accent);
+}
+
+.hero-content div:has(button) {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-section .hero-content button {
+    display: flex;
+    align-items: center;
+}
